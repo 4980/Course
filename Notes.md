@@ -1,14 +1,15 @@
+# Day 1 Notes
+
+A quick review of graphics and games related math.
+
 ## 1D
 
-Scalar
-
-Floats.
+Single dimensional values are called scalars. In the context of this class, they are almost always represented as floats.
 
 ## 2D
 
 Position v Vector
 
-### Position 
 
 A position or location is literaly a  location in space.
 
@@ -18,9 +19,9 @@ A vector is merely a direction. That's it.
 
 Three sides to a triangles
 
-Interior and exterior angle.
+Interior v exterior angle.
 
-Interior angle + exterior angle = 360e
+Interior angle + exterior angle = 360
 
 ## Two kinds of angles.
 
@@ -30,32 +31,31 @@ Degrees v Radians
 
 2 * Pi radians in a circle
 
-If I have x degrees, how mant radians do I have????
-
+If I have x degrees, how mant radians do I have?
 
 Sum of all interior angles in a triangle = 180.
 
 ## Three kinds of angles:
 
-Acute: Less than a right angles
+Acute: Less than a right angles.
 
-Right: 90 degrees or PI halves radians
+Right: 90 degrees or PI halves radians.
 
-Obtuse: Greater than right angles
+Obtuse: Greater than right angles.
+
+A right triangle can not have any obtuse interior angles.
 
 ## Trig
 
-## Trig Example
 
 Fire a rocket at 45 degrees. How far does it travel in x and y in 1 second a 1 unit/second velocity.
 
-Parts of a triangle:
+Treat the problem as a triangle.
+### Parts of a triangle:
 
 Hypotenus - longest leg or leg opposite right angle
 
-Adjacent Leg
-
-Opposite Leg
+Adjacent Leg and Opposite Leg
 
 
 Sine - Sin(Angle) = Opposite Leg/ Hypotenus
@@ -64,22 +64,20 @@ Cosine - Cos(Angle) Adjacent Leg/Hypotenus
 
 Tangent - Tan(Angle) Opposite Leg / Adjacent Leg
 
+What we really need to know in this class:
 
 Sin(Angle) - Y
 Cos(Angle) - X
 Atan(Y/X) - Angle in Q1,2
-Atan2(Y,X) - Angle in Q1,2,3,4
+Atan2(Y,X) - Angle in Q1,2,3,4 -- *Always use atan2*
 
-## Dots and Crosses
+## Dot Products and Cross Products
 
-Dot Product
 
 The dot produt gives the cosine of the angle between two vectors
 
-
 V1 = (V1_x,V1_y), V2=(V2_x,V2_y)
-Dot product = (V1_x*V2_x) + (V1_y*V2_y). ALways a scalar.
-Dot product coolness
+Dot product = (V1_x*V2_x) + (V1_y*V2_y). Dot products always produce a scalar.
 
 If the the vectors are normalized...
 Dot product of 1 = colinear.
@@ -92,11 +90,11 @@ Always normalize first (almost).
 Normalize means set length to 1.
 To normalize divide the vector by its length.
 
-##Vector length??
+How do we get the length of a vector?
 
 Euclidean distance or L2 Norm.
 
-Euclidean distance Sqaure Root of the sum of the sqaures.
+Euclidean distance -- sqaure root of the sum of the sqaures.
 
 sqaure root of(x*x + y*y).
 
@@ -104,7 +102,7 @@ sqaure root of(x*x + y*y).
 
 Right handedness and left handedness
 
-##Cross Product
+## Cross Product
 
 Given two vectors, the cross product gives a thrid vector that is orthogonal to both vectors.
 
