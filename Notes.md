@@ -1,4 +1,4 @@
-# Day 1 Notes
+# Day 1 - Math Review
 
 A quick review of graphics and games related math.
 
@@ -105,6 +105,14 @@ Right handedness and left handedness
 ## Cross Product
 
 Given two vectors, the cross product gives a thrid vector that is orthogonal to both vectors.
+
+# Day 2 - See the Tree
+
+Too often students approach graphics and games like drawing a tree with their back to the tree. You have seen countless trees in your life--but when it comes to drawing one on your own, you have to *See the Tree*.
+
+What does that mean? It means you have to do a detailed study of what you want to make in 3D. Really study it. Draw it. Measure it. Compare it to similar things. What is the same, what is different?
+
+Remember that most ideas start on paper. The professionals, with their million dollar budgets start their ideas on paper (digital or otherwise). You would be okay to follow suit!
 
 
 
