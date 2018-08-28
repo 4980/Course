@@ -114,6 +114,19 @@ What does that mean? It means you have to do a detailed study of what you want t
 
 Remember that most ideas start on paper. The professionals, with their million dollar budgets start their ideas on paper (digital or otherwise). You would be okay to follow suit!
 
+# Day 3 - Basics of Render on a GPU
+
+The four fundamentals of rendering in 3D are:
+
+- Triangular meshes
+- Shaders
+- Rigging (how things can move)
+- Animations (how things do move)
+
+Meshes exist in world space and model space. Model space defines how a model looks, irregarldess of where it is positioned in the scene. Any change in model space changes all the instances of the model. Changes in world space only change the instance.
+
+Animation is based of keyframes. In between keyframes, the engine determines the interpolated values. Animation is often done using curves, wich each curve representing a channel (X traslation, Y rotation, Z scale, etc).
+
 
 
 
