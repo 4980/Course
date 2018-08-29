@@ -114,7 +114,7 @@ What does that mean? It means you have to do a detailed study of what you want t
 
 Remember that most ideas start on paper. The professionals, with their million dollar budgets start their ideas on paper (digital or otherwise). You would be okay to follow suit!
 
-# Day 3 - Basics of Render on a GPU
+# Day 3 - Basics of Rendering on a GPU
 
 The four fundamentals of rendering in 3D are:
 
@@ -126,6 +126,22 @@ The four fundamentals of rendering in 3D are:
 Meshes exist in world space and model space. Model space defines how a model looks, irregarldess of where it is positioned in the scene. Any change in model space changes all the instances of the model. Changes in world space only change the instance.
 
 Animation is based of keyframes. In between keyframes, the engine determines the interpolated values. Animation is often done using curves, wich each curve representing a channel (X traslation, Y rotation, Z scale, etc).
+
+# Day 4 - Rigging and Shaders
+
+## Rigging 
+
+Rigging means adding bones to a model and specifying *how* it can move.
+
+Ridged-body animation means the meshes cannot flex or bend.
+
+Soft-body animation means the meshes can flex or bend.
+
+In blender, you parent meshes to bones (in an armature) to create a rig. Unity can understand this rigs, but cannot generate them. Unity can, however, create animations. 
+
+## Shading
+
+Shaders are small programs attached to meshes that compute how to color each part of the mesh. In early days of computer graphics, sprites were simple attached to meshes. This was simply called texturing. Now, the GPU computes lighting, shadows, ambient occlusion, parallax, and countless other effects in hardware using shaders. Blender's powerful shader engine (Cycles) is not compatible with Unity. If Unity is your final destination, I would use Blender primarily for UV mapping, and do all shading with Unity.
 
 
 
