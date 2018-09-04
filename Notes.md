@@ -143,10 +143,11 @@ In blender, you parent meshes to bones (in an armature) to create a rig. Unity c
 
 Shaders are small programs attached to meshes that compute how to color each part of the mesh. In early days of computer graphics, sprites were simple attached to meshes. This was simply called texturing. Now, the GPU computes lighting, shadows, ambient occlusion, parallax, and countless other effects in hardware using shaders. Blender's powerful shader engine (Cycles) is not compatible with Unity. If Unity is your final destination, I would use Blender primarily for UV mapping, and do all shading with Unity.
 
+# Day 5 - Exporting to OBJ
 
+Start with a JS Fiddle:
 
-
-
+https://jsfiddle.net/bricksphd/y46wpzo1/
 
 
 
