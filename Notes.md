@@ -143,7 +143,17 @@ In blender, you parent meshes to bones (in an armature) to create a rig. Unity c
 
 Shaders are small programs attached to meshes that compute how to color each part of the mesh. In early days of computer graphics, sprites were simple attached to meshes. This was simply called texturing. Now, the GPU computes lighting, shadows, ambient occlusion, parallax, and countless other effects in hardware using shaders. Blender's powerful shader engine (Cycles) is not compatible with Unity. If Unity is your final destination, I would use Blender primarily for UV mapping, and do all shading with Unity.
 
-# Day 5 - Exporting to OBJ
+# Day 5 - Exporting to OBJ - For Loops
+
+The simplest way to procedurally generate anything is to use simple for loops.
+
+To demonstrate, we create a simple city layout using a double for loop that creates a serious of cubes.
+
+To use the results from this code, we export as an OBJ file.
+
+OBJ is a format for exporting 3D objects. In word processing there are two main formats for exporting text -- TXT and DOCX. TXT is the standard for long-term support. It has been around forever and will be around forever. It does not support any complex formatting, but *everything* understands TXT. DOCX, on the otherhand, supports all sorts of formatting. It is a newer format and one day will be replaced by something else.
+
+In the graphics world OBJ is like TXT--it is a simple format that has been around for a very long time and will probably be around forever. Everything understands OBJ, but is it not ideas for production because it does not support complex details. Currently, the industry standard for interoperability is the FBX format. FBX is a proprietary format controlled by Autodesk. One day it will be superceded by something else. In this class, we'll stick with OBJ.
 
 Start with a JS Fiddle:
 
@@ -152,6 +162,63 @@ https://jsfiddle.net/bricksphd/y46wpzo1/
 End with this JS Fiddle: 
 
 https://jsfiddle.net/bricksphd/5dpj0mwy/
+
+# Day 6: Procedural Generation--Recursion & Noise
+
+## How can we procedurally create terrain?
+
+### Simple trig function?
+
+Pros: simple, lots of hills
+
+Cons: Uniform
+
+### Random function?
+
+Pros: Not uniform
+
+Cons: Looks like a corn field or low poly sharp rocks mountain thing
+
+### Look at Real Mountains:
+- Terraced Slopes
+
+- Ridges
+- Lots of vegetation
+- Rocks are textured
+- Slopes
+- Not super pointy on top
+- Clouds and air
+- Erosion
+- Water lines
+- Rock lines = sedementary layers
+- Geology theory -> Rocks were laid down flat
+
+## Noise:
+- White noise. ->Perfectly random interference or noise
+- Brown noise. ->Shows up a lot in nature.
+
+## Brown Noise
+- Used extensively in terrain
+- It does not supply erosion, etc.
+- Hard to tell the scale with brown noise.
+- An example is some stock market data
+
+- Generate Brown noise -> Recursion midpoint algorithm
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
