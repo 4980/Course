@@ -205,8 +205,13 @@ Cons: Looks like a corn field or low poly sharp rocks mountain thing
 
 - Generate Brown noise -> Recursion midpoint algorithm
 
+# Day 7 - Terrain & Unity
 
+We ended Day 6 with ok 2D terrain and impcomplete 3D terrain. Today we polished up 3D terrain and produced convincing 3D terrain.
 
+The "polished" 2D terrain came with a better jitter method when doing the midpoint displacement. Instead of choosing a random displacement location inbetween the left and right points, we chose a value +/- the average the average the right and left points. This plus adjusting the scale, produce reasonable 2D terrain.
+
+Moving onto 3D terrain, we completeted the square diamond alogrithm. The 3D alogrithm has to recurse using 3 steps in order to cover all the points in the plane. With only the square part of the alogrithm, many of the points in the plane would not be adjusted. With both parts of the algorithm, the results are impressive and convincing.  By exporting as an obj, we can import the result as an object in Unity. By adding a first person character, https://github.com/bricksseeds/unity/, and adding a mech collider to the terrain, we walk around on the terrain we generated.
 
 
 
