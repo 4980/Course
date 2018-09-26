@@ -213,6 +213,12 @@ The "polished" 2D terrain came with a better jitter method when doing the midpoi
 
 Moving onto 3D terrain, we completeted the square diamond alogrithm. The 3D alogrithm has to recurse using 3 steps in order to cover all the points in the plane. With only the square part of the alogrithm, many of the points in the plane would not be adjusted. With both parts of the algorithm, the results are impressive and convincing.  By exporting as an obj, we can import the result as an object in Unity. By adding a first person character, https://github.com/bricksseeds/unity/, and adding a mech collider to the terrain, we walk around on the terrain we generated.
 
+# Day 8 Cheeseburgers and L-Systems
+
+When we create things procedurally, we want a controlled chaos--random creation within certain bounds. This leads to two important concepts.  First, in any creation, we have a space of possible items we create. This space, created implicitly or explicitly defines the set of things we can create. Whether plants, trees, cities, or cheeseburgers, we can define mathematically the set of what can be created by our algorithm. Second, in any creation, we define how we sample that space when we create something. A truly random sampling rarely produces what we want. In the real world there are rules that define how we create things or how things are created naturallly.
+
+In order to procedurally generate things in a plausable way, we need to define what those rules are. One way to do that is with L-systems.
+
 
 
 
