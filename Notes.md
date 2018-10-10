@@ -219,13 +219,27 @@ When we create things procedurally, we want a controlled chaos--random creation 
 
 In order to procedurally generate things in a plausable way, we need to define what those rules are. One way to do that is with L-systems.
 
-## Day 9 - Indepth Unity Game
+# Day 9 - Indepth Unity Game
 
 Today we started developing our most indepth Unity game. The process brought out several interesting points quite naturally.
 
 - Bullets through walls. With fast-moving objects in a scene (such as bullets), the physics engine can betray you. The most obvious symptom of this is that the bullets will fly through walls. The reason for this is that by default Unity does discrete collision detection, meaning that is integrates the movement of the bullets my moving them through space and checking at each time step if the bullet is in collision with any objects. If the bullet is travelling fast enough that it moves further than a wall's width during a time step, the physics engine will never know that the bullet hit the wall. To resolve this, we need to tell the psychics engine to use continuous collision detection. This lets the engine know need to use a different method for the bulltes that will always catch wall collisions.
 
 -Phyics in general. Anything that we control with code that also uses the physics engine needs to be done in the FixedUpdate method. This is called on a regular schedule that matches the pyhics engine, as opposed to Update, which gets called on a non-deterministic rate which matches the framerate. Symptoms of using Update instead of FixedUpdate include briefly penetrating walls, etc.
+
+# Day 10 - Triggers & L-Systems in Practice
+
+## Triggers. 
+
+Unity can treat physics colliders as triggers. A trigger is simply a collider that doesn't collide in a physics sense, but merely calls a "OnTriggerEnter" method when it is peneterated. We can use that to create responsive enemies that "notice" the player when they get close enough.
+
+# Procedural Generation Theory
+
+When you generate something using procedural generation, there are two main steps. First, you define a sample space (every possibe outcome). Then you define a method that samples that space.
+
+# L Systems
+
+We can layout a game level using L-Systems. Unfortunately, unless you really take care when generating L Systems, the systems can create degenerate L Systems that self intersect, creating impossible-to-cross levels. One way to resolve this is to use an additional sampling technique called rejection sampling. With rejection sampling, you put your L System in a do-while loop. You generate your L System, then check the result. If the result is acceptible, you break out of the loop. Otherwise, you run the L System. This prevents you from having to creating an terribly complex L System when a simple check in a while loop could detect degenerate cases that would be hard to code out of an L System.
 
 
 
