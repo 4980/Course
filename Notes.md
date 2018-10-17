@@ -241,6 +241,26 @@ When you generate something using procedural generation, there are two main step
 
 We can layout a game level using L-Systems. Unfortunately, unless you really take care when generating L Systems, the systems can create degenerate L Systems that self intersect, creating impossible-to-cross levels. One way to resolve this is to use an additional sampling technique called rejection sampling. With rejection sampling, you put your L System in a do-while loop. You generate your L System, then check the result. If the result is acceptible, you break out of the loop. Otherwise, you run the L System. This prevents you from having to creating an terribly complex L System when a simple check in a while loop could detect degenerate cases that would be hard to code out of an L System.
 
+# Moving to the GPU
+
+The GPU runs micro programs called shaders.
+
+These shaders take advantage of the hyper-threaded nature of the GPU. The GPU can run thousands of threads simultaneously as long as the threads are doing the same computations.
+
+We will focus on two main types of shaders, vertex shaders and fragments shaders.
+
+In Unity, you do not directly attach a shader to a mesh. You place a material on a mesh and a shader on a material. The material passes parameters to a shader. By default, a new object in Unity has a read-only "default" material. To change any material parameters, you need to create a new material.
+
+Custom shaders in Unity use a language similar CG. Some things you might notice about CG code:
+- Variable declarations have a semantic tag, i.e. <type> <variable name> : <SEMANTIC>
+    - These semantics tell the GPU where to put different peices of information in your code (such as vertex positions, normals, etc.)
+    - When in doubt, you call always pass data as a TEXCOORD
+- Variable types can have a number [2-4] appended to them, which creates an array. The values in the array can be accees by using dot notation followed by x, y, z, or w. Unlike other languages, you can also use .xy, .zwx or any other combination you want. This is called swizzling.
+- Most methods are designed to run on all values in an array type. So abs() on a float4 type will return the absolute value on all the elements of the array type.
+- Shaders have different float types.
+  - fixed is a fixed point 12 bit number
+  - half is a 16 bit floating point number
+
 
 
 
