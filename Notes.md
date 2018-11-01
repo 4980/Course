@@ -260,6 +260,15 @@ Custom shaders in Unity use a language similar CG. Some things you might notice 
 - Shaders have different float types.
   - fixed is a fixed point 12 bit number
   - half is a 16 bit floating point number
+    
+    
+# Day 11 & 12 - Advanced Shaders
+
+Advanced shaders allow use to do procedural generation the GPU, at "no cost" to the CPU.
+
+One particularly useful tool for this is Perlin noise, especially 3D perlin noise. By moving our Perlin noise sample through a 3D space where one dimension is time, we can create believable patterns that mimic natuarl behaviors. For example, we were able to make a simple water shader and a simple waving flag.
+
+Shaders can also be told to do deferred rendering, meaning they do write directly to the screen. Instead, they render to a texture in memory. This texture can be used as a texture for another shader. Using this we, can create a CCTV effect. Similarly, we can render mumltiple cameras to create quad view for muli-player games or add a "rear-view" camera in a racing game.
 
 
 
